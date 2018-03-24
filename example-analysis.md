@@ -67,7 +67,7 @@ obtain_prior_*.R
 combine.R
 process_this.R
 process_that.R
-process_final.R
+process_final.R
 
 helpers.R
 README.md
