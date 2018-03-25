@@ -1,6 +1,4 @@
-# R
-
-Get better at R
+# Get better at R
 
   * [helpers.R](helpers.R)
 	
