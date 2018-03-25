@@ -28,3 +28,29 @@ workflow (2016)](http://pavopax.github.io/2016/06/a-new-R-workflow-with-dplyr/)
 
 [`dplyr` is a top 10 invention in past 10
 years](http://pavopax.github.io/2017/02/dplyr-top-10-invention/)
+
+# Recommended R packages
+
+(working list)
+
+data manipulation
+
+  * tidyverse, incl. purrr, etc
+  * magrittr for pipes %T>%, %<>%, etc
+  
+analysis
+
+  * broom for tidying model results
+  * ggsurvplot for survival plots
+
+input/output
+
+  * writexl for writing lists of dfs to Excel
+  * readxl from tidyverse for reading Excel files
+  
+misc
+
+  * testthat (use it for [pipeline
+    tests](https://github.com/great-expectations/great_expectations))
+
+
