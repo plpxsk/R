@@ -66,3 +66,11 @@ limit all lines to 79 or 80 characters max (for exceptions like long file paths,
         
 add `cat("DONE.\n")` to bottom to be sure when run is complete
   
+# References/ideas
+
+Write simple code. 
+
+As you write code, assume that someone who is not you will be reading it tomorrow – so make it easy for them to understand what you are doing.
+
+Pause and re-organize your code and projects:
+* [Organizational Skills Beat Algorithmic Wizardry](http://prog21.dadgum.com/177.html), also summarized on [EJohn Cook's blog](https://www.johndcook.com/blog/2015/06/18/most-important-skill-in-software/)
