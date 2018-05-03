@@ -52,6 +52,8 @@ Returns:
 ## 2 data/file2.csv <tibble [208 x 22]>   208
 ```
 
+*A similar workflow from another user: [https://github.com/vsbuffalo/devnotes/wiki/Data-Analysis-Patterns](https://github.com/vsbuffalo/devnotes/wiki/Data-Analysis-Patterns)*
+
 # Speed test/timer
 
 Copy/paste whole thing into R console and RUN. Takes ~20 s total
