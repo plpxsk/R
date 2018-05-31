@@ -70,3 +70,13 @@ system.time(m1 <- matrix(c(x,y),ncol=2))
 system.time(m2 <- data.frame(x,y))
 system.time(m3 <- data_frame(x,y))
 ```
+
+# Misc
+
+get name of object
+
+```r
+deparse(substitute(diamonds))
+``
+
+Reference: [https://stackoverflow.com/a/14577878/3217870](https://stackoverflow.com/a/14577878/3217870)
