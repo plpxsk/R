@@ -73,10 +73,10 @@ system.time(m3 <- data_frame(x,y))
 
 # Misc
 
-get name of object
+Get name of object as string.
 
 ```r
 deparse(substitute(diamonds))
-``
+```
 
 Reference: [https://stackoverflow.com/a/14577878/3217870](https://stackoverflow.com/a/14577878/3217870)
