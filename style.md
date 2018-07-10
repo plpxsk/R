@@ -64,7 +64,13 @@ limit all lines to 79 or 80 characters max (for exceptions like long file paths,
         
 add `cat("DONE.\n")` to bottom to be sure when run is complete
   
-# References/ideas
+# Testing
+I'm still trying to figure out best practices for "testing" in analysis code. Send me your thoughts [@pavopax](https://twitter.com/pavopax).
+
+In the meantime, here are some references:
+* [assertr](https://cran.r-project.org/web/packages/assertr/vignettes/assertr.html)
+
+# Inspirations
 
 Write simple code. 
 
