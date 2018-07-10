@@ -74,7 +74,7 @@ In the meantime, here are some references:
 
 Write simple code. 
 
-As you write code, assume that someone who is not you will be reading it tomorrow – so make it easy for them to understand what you are doing.
+As you write code, assume that someone who is not you will be reading it tomorrow – so make it easy for them to understand what you are doing and why.
 
 Pause and re-organize your code and projects:
 * [Organizational Skills Beat Algorithmic Wizardry](http://prog21.dadgum.com/177.html), also summarized on [EJohn Cook's blog](https://www.johndcook.com/blog/2015/06/18/most-important-skill-in-software/)
