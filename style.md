@@ -4,8 +4,6 @@
 
 Just some thoughts from my experience which aim to amplify existing guides.
 
-This is more applicable for projects that are larger than a few hundred lines of a single Rmd file.
-
 # Workflow
 
 For more complicated/larger analyses, try to work with R scripts instead of long Rmd documents
