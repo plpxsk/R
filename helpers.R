@@ -10,6 +10,10 @@ expect_unique_rows <- function(.data, id="id_column") {
     testthat::expect_equal(nrow(.data), length(unique(.data[[id]])))
 }
 
+expect_same_names <- function(df1, df2) {
+    testthat::expect_true(all_equal(names(df1), names(df2)))
+}
+
 get_file_from_path  <- function(path, file, suppress_coltype_msg=TRUE) {
     if (suppress_coltype_msg) {
         paste0(path, file) %>% read_csv(col_types=cols())
