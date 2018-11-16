@@ -52,6 +52,19 @@ Returns:
 ## 2 data/file2.csv <tibble [208 x 22]>   208
 ```
 
+# Stop on error in function, print message
+
+```r
+foo <- function(x, kind="a") {
+	if		(kind == "a") x <- "a"
+	else if (kind == "b") x <- "b"
+	else	stop("Bad kind, use kind=a or kind=b")
+
+	return(x)
+}
+
+```
+
 # Speed test/timer
 
 Copy/paste whole thing into R console and RUN. Takes ~20 s total
