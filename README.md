@@ -2,7 +2,7 @@
 
   * [helpers.R](helpers.R)
 	
-	Helper functions I reuse in my projects, and so can you
+	Helper functions I (re)use in my projects, and so can you
 
   * [snippets.md](snippets.md)
 	
