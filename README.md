@@ -17,6 +17,14 @@
     An example data analysis workflow with `Makefile` and
     [New Project Template](https://github.com/pavopax/new-project-template)
 
+# Summary tables in R
+
+Try [`tableone`](https://cran.r-project.org/web/packages/tableone/vignettes/introduction.html)
+
+Other options:
+* [manual purrr/dplyr workflows](https://stackoverflow.com/a/39586168/3217870)
+* xtable
+
 # More
 
 [Essential R packages that will dramatically improve your

@@ -4,8 +4,6 @@
 
 Just some thoughts from my experience which aim to amplify existing guides.
 
-This is more applicable for projects that are larger than a few hundred lines of a single Rmd file.
-
 # Workflow
 
 For more complicated/larger analyses, try to work with R scripts instead of long Rmd documents
@@ -66,3 +64,17 @@ limit all lines to 79 or 80 characters max (for exceptions like long file paths,
         
 add `cat("DONE.\n")` to bottom to be sure when run is complete
   
+# Testing
+I'm still trying to figure out best practices for "testing" in analysis code. Send me your thoughts [@pavopax](https://twitter.com/pavopax).
+
+In the meantime, here are some references:
+* [assertr](https://cran.r-project.org/web/packages/assertr/vignettes/assertr.html)
+
+# Inspirations
+
+Write simple code. 
+
+As you write code, assume that someone who is not you will be reading it tomorrow – so make it easy for them to understand what you are doing and why.
+
+Pause and re-organize your code and projects:
+* [Organizational Skills Beat Algorithmic Wizardry](http://prog21.dadgum.com/177.html), also summarized on [EJohn Cook's blog](https://www.johndcook.com/blog/2015/06/18/most-important-skill-in-software/)

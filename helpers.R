@@ -6,9 +6,12 @@ names_to_upper <- function(.data) {
     .data %>% set_names(., toupper(names(.)))
 }
 
-## requires library(testthat)
-expect_unique_rows <- function(.data, id="id_col") {
-    expect_equal(nrow(.data), length(unique(.data[[id]])))
+expect_unique_rows <- function(.data, id="id_column") {
+    testthat::expect_equal(nrow(.data), length(unique(.data[[id]])))
+}
+
+expect_same_names <- function(df1, df2) {
+    testthat::expect_true(all_equal(names(df1), names(df2)))
 }
 
 get_file_from_path  <- function(path, file, suppress_coltype_msg=TRUE) {
