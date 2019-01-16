@@ -23,7 +23,7 @@ get_file_from_path  <- function(path, file, suppress_coltype_msg=TRUE) {
     }
 }
 
-## to preview all your variables: data %>% char_to_factor %>% summary
+## to preview all your variables: data %>% char_to_factor() %>% summary()
 char_to_factor <- function(.data) {
     .data %>% mutate_if(is.character, as.factor)
 }
