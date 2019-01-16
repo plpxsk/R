@@ -7,6 +7,7 @@ names_to_upper <- function(.data) {
 }
 
 expect_unique_rows <- function(.data, id="id_column") {
+    ## when passes, testthat does not return TRUE, in contrast to assertthat::assert_that()
     testthat::expect_equal(nrow(.data), length(unique(.data[[id]])))
 }
 
