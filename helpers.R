@@ -24,22 +24,21 @@ get_file_from_path  <- function(path, file, suppress_coltype_msg=TRUE) {
 }
 
 
-get_duplicate_ids <- function(df, id=id, return_counts_df=FALSE,
-                              arrange=TRUE) {
-    id_var <- rlang::enquo(id)
-    counts <- df %>% dplyr::count(!!id_var)
-
-    if (return_counts_df) {
-        if (arrange) counts <- counts %>% dplyr::arrange(desc(n))
-        return(counts)
-    }
-    else {
-        duplicated_ids <- counts %>%
-            dplyr::filter(n>1) %>%
-            dplyr::pull(!!id_var) %>%
-            sort()
-        return(duplicated_ids)
-    }
+## to get a dataframe, just use count(df, id)
+## TODO how to speed up select() for dfs with many columns?
+## TODO tried magrittr::extract() but how does it work with NSE?
+get_duplicate_ids <- function(df, id) {
+    ## if id not provided, take first column
+    if (missing(id))    id_var <- rlang::sym(names(df)[1])
+    else                id_var <- rlang::enquo(id)
+    counts <- df %>%
+        # magrittr::extract(!!id_var) %>%
+        dplyr::count(!!id_var)
+    duplicated_ids <- counts %>%
+        dplyr::filter(n>1) %>%
+        dplyr::pull(!!id_var) %>%
+        sort()
+    return(duplicated_ids)
 }
 
 
