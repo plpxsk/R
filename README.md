@@ -11,6 +11,10 @@
   * [style.md](style.md)
     
     Style/workflow tips for programming in R that *amplify* existing guides
+	
+  * [test.md](test.md)
+  
+    Set up a basic test suite in 2 minutes.
 
   * [example-analysis.md](example-analysis.md)
   
