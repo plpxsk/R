@@ -6,6 +6,8 @@ you!)
 
 # Read in many files into tibble of tibbles
 
+
+
 ```r
 files <- list.files("data", pattern=".csv", full.names = TRUE)
 
@@ -29,7 +31,14 @@ This returns dataframes inside a cell:
 ## 2 data/file2.csv <tibble [208 x 22]>
 ```
 
-See next section:
+NOTE: Alternative code via [stack overflow](https://stackoverflow.com/a/47123420/3217870):
+
+```r
+dir("\\.csv$") %>%
+  set_names() %>%
+  map(read.csv) %>%
+  imap(~ transform(.x, filename = .y))
+```
 
 
 # Work with tibble of tibbles
@@ -53,6 +62,7 @@ Returns:
 ```
 
 *A similar workflow from another user: [https://github.com/vsbuffalo/devnotes/wiki/Data-Analysis-Patterns](https://github.com/vsbuffalo/devnotes/wiki/Data-Analysis-Patterns)*
+
 
 # Stop on error in function, print message
 
