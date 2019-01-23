@@ -35,3 +35,21 @@ make_valid_colnames <- function(colnames) {
         gsub("__", "_", .)  %>%   # sometimes get duplicate separators
         gsub("X_", "", .)         # some get X_ prefix
 }
+
+get_duplicated_ids <- function(df, id=id, return_counts_df=FALSE,
+                               arrange=TRUE) {
+    id_var <- rlang::enquo(id)
+    counts <- df %>% dplyr::count(!!id_var)
+
+    if (return_counts_df) {
+        if (arrange) counts <- counts %>% dplyr::arrange(desc(n))
+        return(counts)
+    }
+    else {
+        duplicated_ids <- counts %>%
+            dplyr::filter(n>1) %>%
+            dplyr::pull(!!id_var) %>%
+            sort()
+        return(duplicated_ids)
+    }
+}
