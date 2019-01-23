@@ -7,6 +7,7 @@ names_to_upper <- function(.data) {
 }
 
 expect_unique_rows <- function(.data, id="id_column") {
+    ## when passes, testthat does not return TRUE, in contrast to assertthat::assert_that()
     testthat::expect_equal(nrow(.data), length(unique(.data[[id]])))
 }
 
@@ -22,7 +23,26 @@ get_file_from_path  <- function(path, file, suppress_coltype_msg=TRUE) {
     }
 }
 
-## to preview all your variables: data %>% char_to_factor %>% summary
+
+## to get a dataframe, just use count(df, id)
+## TODO how to speed up select() for dfs with many columns?
+## TODO tried magrittr::extract() but how does it work with NSE?
+get_duplicate_ids <- function(df, id) {
+    ## if id not provided, take first column
+    if (missing(id))    id_var <- rlang::sym(names(df)[1])
+    else                id_var <- rlang::enquo(id)
+    counts <- df %>%
+        # magrittr::extract(!!id_var) %>%
+        dplyr::count(!!id_var)
+    duplicated_ids <- counts %>%
+        dplyr::filter(n>1) %>%
+        dplyr::pull(!!id_var) %>%
+        sort()
+    return(duplicated_ids)
+}
+
+
+## to preview all your variables: data %>% char_to_factor() %>% summary()
 char_to_factor <- function(.data) {
     .data %>% mutate_if(is.character, as.factor)
 }
