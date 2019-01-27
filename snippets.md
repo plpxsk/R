@@ -11,7 +11,7 @@ you!)
 ```r
 files <- list.files("data", pattern=".csv", full.names = TRUE)
 
-data_frame(file=files) %>%
+tibble(file=files) %>%
     mutate(data=map(file, ~read_csv(.)))
 ```
 
@@ -34,7 +34,7 @@ This returns dataframes inside a cell:
 NOTE: Alternative code via [stack overflow](https://stackoverflow.com/a/47123420/3217870):
 
 ```r
-dir("\\.csv$") %>%
+list.files("\\.csv$") %>%
   set_names() %>%
   map(read.csv) %>%
   imap(~ transform(.x, filename = .y))
@@ -46,7 +46,7 @@ dir("\\.csv$") %>%
 apply a function to each dataset (see the third row):
 
 ```r
-data_frame(file=files) %>% 
+tibble(file=files) %>% 
     mutate(data=map(file, ~read_csv(.))) %>%
     mutate(rows=map_int(data, nrow)) 
 ```
@@ -92,7 +92,7 @@ y <- rnorm(n)
 (time <- Sys.time()-s1)
 system.time(m1 <- matrix(c(x,y),ncol=2))
 system.time(m2 <- data.frame(x,y))
-system.time(m3 <- data_frame(x,y))
+system.time(m3 <- tibble(x,y))
 ```
 
 # Misc
