@@ -21,8 +21,12 @@
 
   * [examples/analysis.md](examples/analysis.md)
   
-    An example data analysis workflow with `Makefile` and
-    [New Project Template](https://github.com/pavopax/new-project-template)
+    An example data analysis workflow with `Makefile` and `New Project
+    Template`.
+	
+	Learn more about
+    [Makefile](https://github.com/pavopax/gists/blob/master/makefile-quick-start.md)
+    or [New Project Template](https://github.com/pavopax/new-project-template).
 
   * [examples/r-testing](examples/r-testing)
 

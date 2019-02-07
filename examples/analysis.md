@@ -4,7 +4,8 @@ From a real analysis. Some data redacted.
 
 # Makefile
 
-Makefile contains the recipe to run the entire analysis.
+Makefile contains the recipe to run the entire analysis. [Learn more about
+Makefile](https://github.com/pavopax/gists/blob/master/makefile-quick-start.md)
 
 Eg, to rerun the whole thing, just type `make all` and press ENTER.
 
