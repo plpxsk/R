@@ -19,12 +19,12 @@
 
 # Associated examples
 
-  * [example/analysis.md](example/analysis.md)
+  * [examples/analysis.md](examples/analysis.md)
   
     An example data analysis workflow with `Makefile` and
     [New Project Template](https://github.com/pavopax/new-project-template)
 
-  * [example/r-testing](example/r-testing)
+  * [examples/r-testing](examples/r-testing)
 
     An example of an R analysis with a basic testing suite
 
