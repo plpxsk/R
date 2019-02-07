@@ -16,10 +16,17 @@
   
     Set up a basic test suite in 2 minutes.
 
-  * [example-analysis.md](example-analysis.md)
+
+# Associated examples
+
+  * [example/analysis.md](example/analysis.md)
   
     An example data analysis workflow with `Makefile` and
     [New Project Template](https://github.com/pavopax/new-project-template)
+
+  * [example/r-testing](example/r-testing)
+
+    An example of an R analysis with a basic testing suite
 
 # Summary tables in R
 
