@@ -8,7 +8,6 @@ Just some thoughts from my experience which aim to amplify existing guides.
 
 For more complicated/larger analyses, try to work with R scripts instead of long Rmd documents
 - consider limiting an Rmd document to a quick summary with a few plots, or some one-off analysis
-- see example: look at contents of /code and /notebooks [in this repo's `example/analysis.md`](https://github.com/pavopax/gists/blob/master/example/analysis.md)
 - rationale:
     - large Rmd files, especially if written by <= 1 human, can be unwieldy to manage by others, or by the author in the future
     - splitting one large file into more reusable pieces will make your code more reusable
