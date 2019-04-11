@@ -44,7 +44,7 @@ Files in `test/testthat` contain test suites, start with `test` prefix, and:
 Example: `test_add.R` has:
 
 ```r
-context("Adding functions")
+context("Functions that perform addition")
 
 result <- add_one(20)
 
