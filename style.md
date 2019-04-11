@@ -53,27 +53,23 @@ To reuse data processing and potentially speed up knitting to html or PDF, put d
 
 ## For R scripts
 
-should run with zero (minimal) messages/warnings
+R scripts (.R) should run with zero (minimal) messages/warnings:
 - use `suppressPackageStartupMessages(library(tidyverse))` etc
 - in joining, use explicit `by` variables
-- in reading csv's with read_csv, specify column types, eg with `read_csv("file.csv", col_types = cols())` (I want your thoughts on this: See https://github.com/pavopax/gists/issues/1)
-- rationale: when you run these from command line, with fewer messages, it will be easier to find real/important warnings/messages/errors. if everything is good, you will only see the "DONE" message to signify you're good to go (see next)
+- in reading csv's with read_csv, specify column types, eg with `read_csv("file.csv", col_types = list())`
+- rationale: when you run these from command line, with fewer messages, it will be easier to find real/important warnings/messages/errors. If everything is good, you will see zero messages.
 
-limit all lines to 79 or 80 characters max (for exceptions like long file paths, etc, tag the end with something line `# noqa`)
-        
-add `cat("DONE.\n")` to bottom to be sure when run is complete
-  
+Limit all lines to 79 or 80 characters max (for exceptions like long file paths, etc, tag the end with something line `# noqa`)
+          
 # Testing
-I'm still trying to figure out best practices for "testing" in analysis code. Send me your thoughts [@pavopax](https://twitter.com/pavopax).
 
-In the meantime, here are some references:
+I'm still trying to figure out best practices for "testing" in *analysis* code. Send me your thoughts [@pavopax](https://twitter.com/pavopax).
+
+In the meantime, here are two references:
+* This repo includes a guideline doc for writing tests: [Simple, sane testing in R](https://github.com/pavopax/betR/blob/master/test.md)
 * [assertr](https://cran.r-project.org/web/packages/assertr/vignettes/assertr.html)
 
-# Inspirations
-
-Write simple code. 
-
-As you write code, assume that someone who is not you will be reading it tomorrow – so make it easy for them to understand what you are doing and why.
+# References
 
 Pause and re-organize your code and projects:
-* [Organizational Skills Beat Algorithmic Wizardry](http://prog21.dadgum.com/177.html), also summarized on [EJohn Cook's blog](https://www.johndcook.com/blog/2015/06/18/most-important-skill-in-software/)
+* [Organizational Skills Beat Algorithmic Wizardry](http://prog21.dadgum.com/177.html), also summarized on [John Cook's blog](https://www.johndcook.com/blog/2015/06/18/most-important-skill-in-software/)
