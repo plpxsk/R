@@ -63,6 +63,15 @@ Returns:
 
 *A similar workflow from another user: [https://github.com/vsbuffalo/devnotes/wiki/Data-Analysis-Patterns](https://github.com/vsbuffalo/devnotes/wiki/Data-Analysis-Patterns)*
 
+# Write tibble of tibbles
+
+```r
+gapminder %>%
+    nest(-country) %>%
+    pwalk(~write_csv(x = .y, path = paste0(.x, ".csv") ) )
+```
+
+[Source](https://community.rstudio.com/t/map-write-csv/33292/2)
 
 # Stop on error in function, print message
 
