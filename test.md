@@ -1,6 +1,6 @@
 # Simple, sane testing in R
 
-This workflow doesn't require your project directory to be an R package.
+Importantly, this workflow **doesn't require your project directory to be an R package**.
 
 # Step 0
 
@@ -17,6 +17,8 @@ add_one <- function(x) {
 
 
 # Set up
+
+Let's set up a testing suite for the functions in the above file.
 
 ```r
 install.packages('testthat') 
@@ -42,7 +44,7 @@ Files in `test/testthat` contain test suites, start with `test` prefix, and:
 Example: `test_add.R` has:
 
 ```r
-context("Adding functions")
+context("Functions that perform addition")
 
 result <- add_one(20)
 
