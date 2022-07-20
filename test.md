@@ -72,7 +72,7 @@ In your project root folder, execute:
 Rscript tests/run_tests.R
 ```
 
-If everything passes on first try without errors, get yourself some ice cream :)
+If everything passes on first try without errors, celebrate with some ice cream :)
 
 # Add more
 
